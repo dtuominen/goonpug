@@ -1060,7 +1060,7 @@ StopServerDemo()
  */
 StartLiveMatch()
 {
-    StartServerDemo();
+    //StartServerDemo(); // Removed until we resolve server crashes
     ChangeMatchState(MS_LO3);
     ServerCommand("exec goonpug_match.cfg\n");
     PrintToChatAll("Live on 3...");
@@ -1382,7 +1382,7 @@ public Action:Command_Ready(client, args)
                 decl String:name[64];
                 GetClientName(client, name, sizeof(name));
                 g_playerReady[client] = true;
-                PrintToChatAll("[GP] %s is now ready.", name);
+                PrintToChatAll("[GP] %s has achieved a new level of bushido.", name);
             }
         }
         default:
