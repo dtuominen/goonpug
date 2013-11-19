@@ -1197,9 +1197,6 @@ public Action:Timer_ReadyUp(Handle:timer)
     if ((count % 30) == 0)
     {
         PrintToChatAll("[GP] Still need %d players to ready up...", neededCount);
-    }
-    if ((count % 60) == 0)
-    {
         PrintToChatAll("[GP] The following players are still not ready:");
         decl String:msg[192];
         Format(msg, sizeof(msg), "[GP] ");
@@ -1387,7 +1384,7 @@ public Action:Command_Ready(client, args)
                 decl String:name[64];
                 GetClientName(client, name, sizeof(name));
                 g_playerReady[client] = true;
-                PrintToChatAll("[GP] %s is now ready.", name);
+                PrintToChatAll("[GP] %s has achieved a new level of bushido.", name);
             }
         }
         default:
