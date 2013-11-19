@@ -1062,7 +1062,7 @@ StopServerDemo()
  */
 StartLiveMatch()
 {
-    StartServerDemo();
+    //StartServerDemo(); // Removed until we resolve server crashes
     ChangeMatchState(MS_LO3);
     ServerCommand("exec goonpug_match.cfg\n");
     PrintToChatAll("Live on 3...");
