@@ -2171,7 +2171,7 @@ PostMatch(bool:abort=false)
         decl String:map[MAX_MAPNAME_LEN];
         FormatMapName(map, sizeof(map), fileid, mapname);
         GPSetNextMap(map);
-        new Handle:hDelay = FindConVar("tv_delay");
+        new Handle:hDelay = FindConVar("mp_win_panel_display_time");
         new Float:delay = float(GetConVarInt(hDelay));
         PrintToChatAll("[GP] Will switch to warmup map when GOTV broadcast completes (%0.f seconds)", delay);
         CreateTimer(delay, Timer_ChangeMap);
